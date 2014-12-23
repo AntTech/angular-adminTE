@@ -1,0 +1,20 @@
+ublimeText project files
+*.sublime-workspace
+
+#psd
+*.psd
+
+#fekit
+prd
+ver
+refs
+dev
+
+#node_modules
+node_modules
+
+#karma test
+coverage
+
+#bower
+app
