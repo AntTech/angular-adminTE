@@ -1,4 +1,4 @@
 angular.module('uielements.general', [])
-.controller('general',['$scope', function($scope) {
+.controller('generalController',['$scope', function($scope) {
 	console.log('uielements.general');
 }])

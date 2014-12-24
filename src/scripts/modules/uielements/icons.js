@@ -1,4 +1,4 @@
 angular.module('uielements.icons', [])
-.controller('icons',['$scope', function($scope) {
+.controller('iconsController',['$scope', function($scope) {
 	console.log('uielements.icons');
 }])
