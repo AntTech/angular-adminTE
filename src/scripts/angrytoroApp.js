@@ -18,3 +18,19 @@ angular.module('angrytoroApp',['ngRoute','dashboard','uielements'])
 .run(['$rootScope', '$route', function($rootScope, $route) {
 	console.log('run');
 }]);
+
+angular.element(document).ready(function() {
+
+	var $inject = angular.injector(['ng', 'e2e-mock']); // dev
+	// var $inject = angular.injector(['ng']); //online
+
+	$inject.invoke(['$http', function($http) {
+		$http.get('/auth/user?timeStamp=' + new Date().getTime())
+		.success(function(data, status, headers, config) {
+			console.log(data);
+			angular.bootstrap(document, ['angrytoroApp']);
+		}).error(function(data, status, headers, config) {
+			console.log(data);
+		})
+	}]);
+});
