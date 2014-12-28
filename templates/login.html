@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="bg-black" ng-app="loginApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>AdminLTE | Log in</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <link href="../app/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../prd/styles/font-awesome@sfsdds72382.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="../src/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body class="bg-black">
+
+        <div class="form-box" id="login-box" ng-controller="loginController">
+            <div class="header">Sign In</div>
+            <form name="loginForm" ng-submit="loginSubmit($event)" method="post">
+                <div class="body bg-gray">
+                    <div ng-messages="loginForm.userid.$error">
+                        <div class="alert alert-danger" role="alert" ng-message="required">
+                            You did not enter userid
+                        </div>
+                        <div class="alert alert-danger" role="alert" ng-message="minlength">
+                            userid minlength is 6
+                        </div>
+                    </div>
+                    <div ng-messages="loginForm.password.$error">
+                        <div class="alert alert-danger" role="alert" ng-message="required">
+                            You did not enter password
+                        </div>
+                        <div class="alert alert-danger" role="alert" ng-message="minlength">
+                            password minlength is 6
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" ng-model="userid" name="userid" required minlength="6" class="form-control" placeholder="User ID"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" ng-model="password" name="password" required minlength="6" class="form-control" placeholder="Password"/>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" ng-model="remember"/> Remember me</label>
+                    </div>
+                </div>
+                <div class="footer">                                                               
+                    <input type="submit" class="btn bg-olive btn-block">Sign me in</input>  
+                    
+                    <p><a href="javascript:;">I forgot my password</a></p>
+                    
+                    <a href="register.html" class="text-center">Register a new membership</a>
+                </div>
+            </form>
+
+            <div class="margin text-center">
+                <span>Sign in using social networks</span>
+                <br/>
+                <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
+                <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+                <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+
+            </div>
+        </div>
+
+        <script src="../app/components/jquery/dist/jquery.min.js"></script>
+        <script src="../app/components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="../app/components/angular-messages/angular-messages.min.js" type="text/javascript"></script>
+        <script src="../prd/scripts/modules/login/loginApp@sdse2323.js" type="text/javascript"></script>
+        <!--mock-->
+        <script src="../app/components/angular-mocks/angular-mocks.js" type="text/javascript"></script>
+        <script src="../test/e2e/mock/login_mock.js" type="text/javascript"></script>
+    </body>
+</html>

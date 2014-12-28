@@ -27,8 +27,11 @@ angular.element(document).ready(function() {
 	$inject.invoke(['$http', function($http) {
 		$http.get('/auth/user?timeStamp=' + new Date().getTime())
 		.success(function(data, status, headers, config) {
-			console.log(data);
-			angular.bootstrap(document, ['angrytoroApp']);
+			if (data.ret) {
+				angular.bootstrap(document, ['angrytoroApp']);
+			} else {
+				location.href = 'login.html';
+			}
 		}).error(function(data, status, headers, config) {
 			console.log(data);
 		})
