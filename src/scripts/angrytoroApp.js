@@ -1,4 +1,4 @@
-angular.module('angrytoroApp',['ngRoute','dashboard','uielements'])
+angular.module('angrytoroApp',['ngRoute', 'services.error', 'angrytoro.header', 'angrytoro.sidebar', 'dashboard','uielements'])
 .constant('appConfig', {
 	apiPre: '',
 	templateUrlPre: '../templates/'

@@ -1,4 +1,4 @@
-angular.module('angrytoro.error', [])
+angular.module('services.error', [])
 .factory('errorService', [function() {
 	return {
 		report: function(data) {

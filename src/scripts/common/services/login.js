@@ -1,4 +1,4 @@
-angular.module('angrytoro.login', ['angrytoro.error'])
+angular.module('services.login', ['services.error'])
 .factory('loginService', ['$http', 'errorService', function($http, errorService) {
 
 	return {
